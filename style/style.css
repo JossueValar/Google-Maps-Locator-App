@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh; /* vh syas it's the top of the body*/
+    margin: 0;
+    padding: 0;
+}
+
+#map{
+  width: 100%;
+  height: 100%;
+}
+
+.storeL{
+  position: absolute; /*look for answer*/
+  z-index: 1000; /* the priority of what shows above what, layers*/
+  font-size: 70px;
+  font-weight: bold;
+  color: #8eff91;
+  text-transform: uppercase;
+  top: 130px; /*100 pixels from the top*/
+  left: 50px;
+  border-radius: 40px;
+  padding: 7px;
+  background-color: rgba(21, 21, 21, 0.9);
+}
+
+.searchCon{
+  position: absolute;
+  z-index: 1000;
+  top: 230px;
+  left: 50px;
+  width: 400px;
+  height: 60px;
+  background-color: #14946e;/*color of background lol*/
+  border-radius: 30px;
+  display: flex; /*to center it becomes a flexible container*/
+}
+
+.searchCon .searchInput{
+  flex-grow: 1; /*it becomes full height and width of the other container*/
+  display: flex;
+  align-items: center;
+  padding-left: 20px; /*space from the div*/
+  padding-right: 20px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+/*.search-container input {
+    width: 100%;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    color: white;
+}*/
+
+.searchCon input{ /*targets the input inside searchCon*/
+  font-size: 25px;
+  background-color: inherit; /*takes the color of the div it is in*/
+  border: none;
+  color: white; /*color of text*/
+  flex-grow: 1; /*it becomes full height and width of the other container*/
+  display: flex;
+
+}
+
+.searchCon input:focus{ /*when you select*/
+  outline: none;
+}
+
+.searchInput i{
+  font-size: 25px;
+  color: white;
+}
+
+.storeListCon{
+    position: absolute;
+    z-index: 1000;
+    top: 300px;
+    left: 50px;
+    bottom: 20px; /* stretch it to the bottom*/
+    background-color: black;
+    width: 400px;
+    border-radius: 30px;
+    bottom: 20px;
+    overflow-y: none; /* makes the container scrollable*/
+    display: flex;
+    padding-bottom: 20px;
+    opacity: 0.9;
+}
+
+.storeCon{
+  border-bottom: 1px solid #049b5f;
+    display: flex;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.phoneNumber{
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.storeAddress{
+  font-size: 21px;
+  color: white;
+  margin-top: 30px;
+}
+
+.storeAddress span{
+  display: block; /*takes the whole space of the container*/
+}
+
+.storenumber{
+  width: 30px;
+  height: 30px;
+  background-color: #00a55d;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  display: flex;
+  justify-content: center; /*center horizontaly*/
+  align-items: center; /*centervertically*/
+}
+
+.storeinfocontainer{
+  flex-grow: 1; /*fill as much as you can*/
+}
+
+.storenumbercontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.storeList{
+  flex-grow: 1;
+  overflow-y: scroll;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.storeList::-webkit-scrollbar {
+  display: none;
+}
+
+.storeInfoWin{
+  min-width: 300px;
+  font-size: 18px; /*passes to all the children*/
+  padding: 8px;
+
+}
+
+.storeNameWin{
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0,0,0.87);
+
+}
+
+.storeInfoStatus{
+  margin-top: 6px;
+  border-bottom: 1px solid #00000029;
+  padding-bottom: 6px;
+
+}
+
+.storeInfoStatus i{
+  color: #14946e;
+}
+
+.storeAddressWin, .storePhoneWin{
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+
+}
+
+.circle{
+  width: 30px;
+  height: 30px;
+  background-color: #14946e;
+  color: white;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-right: 5px;
+}
+
+.link{
+  color: #14946e;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.searchInput i{
+  cursor: pointer;
+}
+
+.storeConBack{
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  border-radius: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.storeConBack:hover{
+  background-color: #081f0f;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 1.5rem;            /* Footer height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.5);
+}

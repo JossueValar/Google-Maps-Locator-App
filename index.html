@@ -1,0 +1,43 @@
+<!DOCTYPE html><!--Tells the browser this is a Html file-->
+<html lang="en" dir="ltr">
+  <head><!--Defines the resources for the website -->
+    <meta charset="utf-8">
+    <title>Google Maps Project</title>
+    <script src="js/store-data.js"></script> <!-- get the store data first -->
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script><!--Library to use the icons in this website, javascript code readable for the machine-->
+  </head>
+    <body>
+      <div class="storeL">Store Locator</div>
+        <div class="searchCon">
+          <div class="searchInput">
+            <input id="zipCode" type="text" placeholder="Enter the zip code" onkeyup="searchStores()"/>
+          <i class="fas fa-search" onclick="searchStores()"></i>
+        </div>
+      </div>
+        <div class="storeListCon">
+            <div class="storeList">
+                <div class="storeCon">
+                  <div class="storeinfocontainer">
+                    <div class="storeAddress">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="phoneNumber"></div>
+                  </div>
+                    <div class="storenumbercontainer">
+                      <div class="storenumber">
+                        1
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="map"></div>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzv8ZLU5OLlud7lUhMxwRc9Gnlc26scSk&callback=initMap">
+        </script><!--Calls initmap-->
+    </body>
+    <footer id="footer">Made by &copy; Jossue Valverde, 2021 | April 2020</footer>
+</html>
